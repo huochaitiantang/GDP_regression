@@ -1,0 +1,9 @@
+cycler==0.10.0
+engineering-notation==0.5.2
+kiwisolver==1.0.1
+matplotlib==3.0.2
+numpy==1.15.2
+pyparsing==2.3.0
+python-dateutil==2.7.5
+rethinkdb==2.3.0.post6
+six==1.11.0
