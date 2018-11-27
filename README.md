@@ -12,7 +12,7 @@ Chinese GDP regression by  Least squares approximation
 
 ## Visual
 * For Test Data
-![avatar](/pics/Test_solve_visual.png)
+![avatar](/pics/test_linear_full_solve_visual.png)
 
 * For GDP Data
-![avatar](/pics/GDP_solve_visual.png)
+![avatar](/pics/GDP_full_solve_visual.png)
