@@ -6,9 +6,17 @@ Chinese GDP regression by  Least squares approximation
 
 ## Run
 
-`python stat_GDP.py type thresh`
-* type = full or backward or forward or forward_backward (Args for regression type)
-* thresh = 2.94 or 4.28 or 7.88 or others (Args for F_in and F_out)
+* type = full, backward, forward, forward_backward (Args for regression type, default = full)
+* thresh = 2.94, 4.28, 7.88, ...(Args for F_in and F_out, default = 2.94)
+
+`python stat_GDP.py [type] [thresh]`
+
+* Example
+`python stat_GDP.py`
+`python stat_GDP.py full`
+`python stat_GDP.py forward`
+`python stat_GDP.py backward 4.28`
+`python stat_GDP.py forward_backward 2.00`
 
 ## Generate Linear Data for test
 `python generate_test_data.py`

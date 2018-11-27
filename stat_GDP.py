@@ -127,39 +127,6 @@ class RegressionModel:
         self.cal_metric()
         self.cal_abs_Ts_Fs()
 
-    def X(self):
-        return self._X
-
-    def Y(self):
-        return self._Y
-
-    def n(self):
-        return self._n
-
-    def p(self):
-        return self._p
-
-    def est_beta(self):
-        return self._est_beta
-
-    def est_Y(self):
-        return self._est_Y
-
-    def Q(self):
-        return self._Q
-
-    def U(self):
-        return self._U
-
-    def R2(self):
-        return self._R2
-
-    def F(self):
-        return self._F
-
-    def abs_Ts(self):
-        return self._abs_Ts
-
     def Fs(self):
         return self._Fs
 
@@ -197,7 +164,6 @@ class RegressionModel:
         plt.legend(loc='upper left')
     
         plt.show()
-
 
 
 # Backward method for variable choice
@@ -246,7 +212,6 @@ class BackwardRegressionModel:
 
         print("Backward End")
         model.visual(1978)
-
 
 
 # Forward method for variable choice
@@ -418,8 +383,8 @@ class ForwardBackwardRegressionModel:
 
 
 def main():
-    #parseFile = ParseFile("linear.csv")
-    parseFile = ParseFile("data_GDP.csv")
+    #parseFile = ParseFile("data/linear.csv")
+    parseFile = ParseFile("data/data_GDP.csv")
 
     # alpha = 0.10, F(1, 23) = 2.94
     # alpha = 0.05, F(1, 23) = 4.28
@@ -449,7 +414,7 @@ def main():
         model.solve()
 
     else:
-        # Forward choose model
+        # Forward-Backward choose model
         model = ForwardBackwardRegressionModel(parseFile.X(), parseFile.Y(), parseFile.X_names(), parseFile.Y_name(), F_in, F_out)
         model.solve()
     
